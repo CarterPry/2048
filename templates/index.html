@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <style>
+      table {
+        display: table;
+        margin: 0 auto;
+        border-collapse: collapse;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      td {
+  width: 80px;
+  height: 80px;
+  border: 1px solid black;
+  text-align: center;
+  background-color: lightblue;
+  transition: all 1s ease-out;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  vertical-align: middle;
+}
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 20px 40px;
+        background-color: #EEDEE5;
+        color: black;
+        border-radius: 10px;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        font-family: 'Sans-serif Verdana';
+
+      }
+      body {
+        background-color: #ffeef8;
+      }
+      .move {
+  animation: move 0.5s ease-out;
+}
+
+@keyframes move {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(50px, 50px);
+  }
+}
+    </style>
+    <h1 style = 'text-align: center; font-size: 40px; font-family: Lucida Console;'>2048.py</h1>
+  </head>
+  <body>
+    <table>
+      {% for row in griddy %}
+        <tr>
+          {% for cell in row %}
+            <td class="box">{{ cell }}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </table>
+    <br>
+    
+    <script>
+      document.onkeydown = function(event) {
+        switch (event.keyCode) {
+          case 37:
+            window.location = '/move/left';
+            break;
+          case 38:
+            window.location = '/move/up';
+            break;
+          case 39:
+            window.location = '/move/right';
+            break;
+          case 40:
+            window.location = '/move/down';
+            break;
+        }
+      };
+
+      const boxes = document.querySelectorAll('.box');
+
+      boxes.forEach(box => {
+        box.addEventListener('click', function() {
+          this.classList.toggle('moved');
+        });
+      });
+
+    </script>
+  </body>
+  <button onclick="location.href='http://127.0.0.1:5000'">Restart</button>
+</html>
