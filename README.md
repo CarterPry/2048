@@ -6,7 +6,10 @@ Installation
 To run this game, you need to have Python 3 and Flask installed on your computer. If you don't have Flask installed, you can follow the instructions in this [guide](https://phoenixnap.com/kb/install-flask) to install it.
 How to Play
 
-![flask](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/1200px-Flask_logo.svg.png)
+<p align="center">
+  <img src="https://camo.githubusercontent.com/14395f3871b0714bcc86674acf940a60bd80b8b4bc26cfd3f6bb5fd4f5a1cfb9/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f332f33632f466c61736b5f6c6f676f2e7376672f3132303070782d466c61736b5f6c6f676f2e7376672e706e67" alt="Flask" width="250" height="400" />
+</p>
+
 
 To start the game, run the following command in your terminal:
 
